@@ -1,0 +1,5 @@
+Shop = {}
+
+Shop.one = {
+    
+}

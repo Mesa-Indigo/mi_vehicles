@@ -1,6 +1,6 @@
-Data = {}
+Type = {}
 
-Data.Auto = {
+Type.Auto = {
     -- compacts
     compact = {
         ['asbo'] =      { year = 2019,  make = 'Maxwell',    model = 'Asbo',         cost = 1000 },
@@ -10,7 +10,7 @@ Data.Auto = {
 }
 
 
-Data.Moto = {
+Type.Moto = {
     -- compacts
     compact = {
         ['asbo'] =      { year = 2019,  make = 'Maxwell',    model = 'Asbo',         cost = 1000 },
@@ -20,7 +20,7 @@ Data.Moto = {
 }
 
 
-Data.Cycle = {
+Type.Cycle = {
     urban = {
         ['bmx'] =      { year = 2019,  make = 'Maxwell',    model = 'Asbo',         cost = 1000 },
         ['cruiser'] =    { year = 2013,  make = 'Dinka',      model = 'Blista',       cost = 1000 },
@@ -39,7 +39,7 @@ Data.Cycle = {
 }
 
 
-Data.Plane = {
+Type.Plane = {
     -- compacts
     compact = {
         ['asbo'] =      { year = 2019,  make = 'Maxwell',    model = 'Asbo',         cost = 1000 },
@@ -49,7 +49,7 @@ Data.Plane = {
 }
 
 
-Data.Boat = {
+Type.Boat = {
     -- compacts
     compact = {
         ['asbo'] =      { year = 2019,  make = 'Maxwell',    model = 'Asbo',         cost = 1000 },
