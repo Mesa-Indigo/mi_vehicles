@@ -1,5 +1,0 @@
-Shop = {}
-
-Shop.one = {
-    
-}

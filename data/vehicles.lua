@@ -1,4 +1,3 @@
-Type = {}
 
 Type.Auto = {
     -- compacts

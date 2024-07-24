@@ -1,4 +1,3 @@
-Garage = {}
 
 Garage.Blip = { spr = 289, scl = 0.6, clr = 12, lbl = 'Garage'}
 
