@@ -15,3 +15,12 @@ end, false)
 RegisterCommand('mi_loadcar', function()
     
 end, false)
+
+
+
+
+-- testing for images
+-- tp coords -213.182, -1328.416, 31.300, 74.622
+RegisterCommand('testcar', function()
+    local vehicle = lib.callback.await('mivehicle:test', false, source)
+end, false)
