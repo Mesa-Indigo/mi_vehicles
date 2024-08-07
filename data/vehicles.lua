@@ -1,15 +1,15 @@
 
 Type.Auto = {
     compact = {
-        asbo =            { make = 'Maxwell',        model = 'Asbo',               cost = 1000 },
-        blista =          { make = 'Dinka',          model = 'Blista',             cost = 1000 },
-        club =            { make = 'BF',             model = 'Club',               cost = 1000 },
-        dilettante =      { make = 'Karin',          model = 'Dilettante',         cost = 1000 },
-        issi2 =           { make = 'Weeny',          model = 'Issi',               cost = 1000 },
-        panto =           { make = 'Benefactor',     model = 'Panto',              cost = 1000 },
-        prairie =         { make = 'Bollokan',       model = 'Prairie',            cost = 1000 },
-        rhapsody =        { make = 'Declasse',       model = 'Rhapsody',           cost = 1000 },
-        weevil =          { make = 'BF',             model = 'Weevil',             cost = 1000 },
+        asbo =            { make = 'Maxwell',        model = 'Asbo',               cost = 1000, image = 'nui://mi_vehicles/data/img/asbo.png'},
+        blista =          { make = 'Dinka',          model = 'Blista',             cost = 1000, image = 'nui://mi_vehicles/data/img/blista.png'},
+        club =            { make = 'BF',             model = 'Club',               cost = 1000, image = 'nui://mi_vehicles/data/img/club.png'},
+        dilettante =      { make = 'Karin',          model = 'Dilettante',         cost = 1000, image = 'nui://mi_vehicles/data/img/dilettante.png'},
+        issi2 =           { make = 'Weeny',          model = 'Issi',               cost = 1000, image = 'nui://mi_vehicles/data/img/issi2.png'},
+        panto =           { make = 'Benefactor',     model = 'Panto',              cost = 1000, image = 'nui://mi_vehicles/data/img/panto.png'},
+        prairie =         { make = 'Bollokan',       model = 'Prairie',            cost = 1000, image = 'nui://mi_vehicles/data/img/prairie.png'},
+        rhapsody =        { make = 'Declasse',       model = 'Rhapsody',           cost = 1000, image = 'nui://mi_vehicles/data/img/rhapsody.png'},
+        weevil =          { make = 'BF',             model = 'Weevil',             cost = 1000, image = 'nui://mi_vehicles/data/img/weevil.png'},
     },
     coupe = {
         exemplar =        { make = 'Dewbauchee',     model = 'Exemplar',           cost = 1000 },

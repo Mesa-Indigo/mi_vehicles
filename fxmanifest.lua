@@ -14,7 +14,7 @@ description 'ox_core script for vehicle interactions, shops, and garages'
 --[[    dependancies    ]]--
 dependencies { '/server:7290', '/onesync', 'ox_lib', 'ox_target', 'ox_core' }
 
---[[    manifest information    ]]--
+--[[    manifest information    ]]-- --'data/img/*.png' for images
 shared_scripts { '@ox_lib/init.lua', '@ox_core/lib/init.lua', 'shared/*.lua', 'data/**/*.lua' }
 
 client_scripts { '@ox_core/imports/client.lua', 'client/**/*.lua' }
