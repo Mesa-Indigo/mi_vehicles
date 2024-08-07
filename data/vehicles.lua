@@ -313,7 +313,6 @@ Type.Moto = {
     offroad = {
         ['bf400'] =          { make = 'Maxwell',        model = 'word',               cost = 1000 },
         ['cliffhanger'] =    { make = 'Dinka',          model = 'word',               cost = 1000 },
-        ['chimera'] =        { make = 'Grotti',         model = 'word',               cost = 1000 },
         ['enduro'] =         { make = 'Maxwell',        model = 'word',               cost = 1000 },
         ['manchez'] =        { make = 'Dinka',          model = 'word',               cost = 1000 },
         ['manchez2'] =       { make = 'Grotti',         model = 'word',               cost = 1000 },
