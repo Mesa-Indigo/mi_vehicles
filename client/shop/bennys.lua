@@ -10,7 +10,7 @@ local loadmenu = function(type)
     lib.registerContext({
         id = 'list',
         title = 'Listed Vehicles',
-        menu = 'shop_lxm',
+        menu = 'shop_bnc',
         options = vehicles
     })
     lib.showContext('list')
@@ -18,26 +18,26 @@ end
 
 local options = {
     {
-        title = 'Sports',
+        title = 'Tuners',
         onSelect = function()
-            loadmenu(Type.Import.sport)
+            loadmenu(Type.Special.tuner)
         end,
     },
     {
-        title = 'Supers',
+        title = 'Classics',
         onSelect = function()
-            loadmenu(Type.Import.super)
+            loadmenu(Type.Special.classic)
         end,
     },
 }
 
-RegisterCommand('lxm', function()
+RegisterCommand('bnc', function()
     lib.registerContext({
-        id = 'shop_lxm',
-        title = 'Luxury Imports',
+        id = 'shop_bnc',
+        title = 'Benny\'s Customs',
         menu = 'pdm_main',
         options = options
     })
 
-    lib.showContext('shop_lxm')
+    lib.showContext('shop_bnc')
 end, false)
