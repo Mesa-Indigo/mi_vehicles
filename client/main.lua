@@ -21,6 +21,22 @@ end, false)
 
 -- testing for images
 -- tp coords -213.182, -1328.416, 31.300, 74.622
-RegisterCommand('testcar', function()
-    local vehicle = lib.callback.await('mivehicle:test', false, source)
+RegisterCommand('testmenu', function()
+    local mmenu = Type.Auto.compact
+    local vehicles = {}
+    for k, v in pairs(mmenu) do
+        vehicles[#vehicles+1] = {
+            title = v.make..', '..v.model,
+            description = '$'..v.cost
+        }
+    end
+
+    lib.registerContext({
+        id = 'veh_compact',
+        title = 'Compacts',
+        menu = 'some_menu',
+        options = vehicles
+    })
+
+    lib.showContext('veh_compact')
 end, false)
