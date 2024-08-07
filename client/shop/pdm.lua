@@ -4,7 +4,7 @@ local loadmenu = function(type)
         vehicles[#vehicles+1] = {
             title = v.make..', '..v.model,
             description = '$'..v.cost,
-            image = v.image
+            --image = v.image
         }
     end
     lib.registerContext({
@@ -26,55 +26,43 @@ local options = {
     {
         title = 'Coupes',
         onSelect = function()
-            print("da car")
+            loadmenu(Type.Auto.coupe)
         end,
     },
     {
         title = 'Sedans',
         onSelect = function()
-            print("da car")
+            loadmenu(Type.Auto.sedan)
         end,
     },
     {
         title = 'Suvs',
         onSelect = function()
-            print("da car")
+            loadmenu(Type.Auto.suv)
         end,
     },
     {
         title = 'Trucks',
         onSelect = function()
-            print("da car")
+            loadmenu(Type.Auto.truck)
         end,
     },
     {
         title = 'Vans',
         onSelect = function()
-            print("da car")
+            loadmenu(Type.Auto.van)
         end,
     },
     {
         title = 'Muscle',
         onSelect = function()
-            print("da car")
+            loadmenu(Type.Auto.muscle)
         end,
     },
     {
         title = 'Off-Road',
         onSelect = function()
-            print("da car")
-        end,
-    },
-    {
-        title = 'Sport',
-        onSelect = function()
-            print("da car")
-        end,
-    },
-    {
-        title = 'Super',
-        onSelect = function()
-            print("da car")
+            loadmenu(Type.Auto.offroad)
         end,
     },
 }
@@ -88,28 +76,4 @@ RegisterCommand('pdm', function()
     })
 
     lib.showContext('shop_pdm')
-end, false)
-
-
-
-
-RegisterCommand('testmenu', function()
-    local mmenu = Type.Auto.compact
-    local vehicles = {}
-    for _, v in pairs(mmenu) do
-        vehicles[#vehicles+1] = {
-            title = v.make..', '..v.model,
-            description = '$'..v.cost,
-            image = v.image
-        }
-    end
-
-    lib.registerContext({
-        id = 'veh_compact',
-        title = 'Compacts',
-        menu = 'some_menu',
-        options = vehicles
-    })
-
-    lib.showContext('veh_compact')
 end, false)

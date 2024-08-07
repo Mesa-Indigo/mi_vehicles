@@ -1,29 +1,29 @@
 
 Type.Auto = {
     compact = {
-        asbo =            { make = 'Maxwell',        model = 'Asbo',               cost = 1000, image = 'nui://mi_vehicles/data/img/asbo.png'},
-        blista =          { make = 'Dinka',          model = 'Blista',             cost = 1000, image = 'nui://mi_vehicles/data/img/blista.png'},
-        club =            { make = 'BF',             model = 'Club',               cost = 1000, image = 'nui://mi_vehicles/data/img/club.png'},
-        dilettante =      { make = 'Karin',          model = 'Dilettante',         cost = 1000, image = 'nui://mi_vehicles/data/img/dilettante.png'},
-        issi2 =           { make = 'Weeny',          model = 'Issi',               cost = 1000, image = 'nui://mi_vehicles/data/img/issi2.png'},
-        panto =           { make = 'Benefactor',     model = 'Panto',              cost = 1000, image = 'nui://mi_vehicles/data/img/panto.png'},
-        prairie =         { make = 'Bollokan',       model = 'Prairie',            cost = 1000, image = 'nui://mi_vehicles/data/img/prairie.png'},
-        rhapsody =        { make = 'Declasse',       model = 'Rhapsody',           cost = 1000, image = 'nui://mi_vehicles/data/img/rhapsody.png'},
-        weevil =          { make = 'BF',             model = 'Weevil',             cost = 1000, image = 'nui://mi_vehicles/data/img/weevil.png'},
+        ['asbo'] =            { make = 'Maxwell',        model = 'Asbo',               cost = 1000 },
+        ['blista'] =          { make = 'Dinka',          model = 'Blista',             cost = 1000 },
+        ['club'] =            { make = 'BF',             model = 'Club',               cost = 1000 },
+        ['dilettante'] =      { make = 'Karin',          model = 'Dilettante',         cost = 1000 },
+        ['issi2'] =           { make = 'Weeny',          model = 'Issi',               cost = 1000 },
+        ['panto'] =           { make = 'Benefactor',     model = 'Panto',              cost = 1000 },
+        ['prairie'] =         { make = 'Bollokan',       model = 'Prairie',            cost = 1000 },
+        ['rhapsody'] =        { make = 'Declasse',       model = 'Rhapsody',           cost = 1000 },
+        ['weevil'] =          { make = 'BF',             model = 'Weevil',             cost = 1000 },
     },
     coupe = {
-        exemplar =        { make = 'Dewbauchee',     model = 'Exemplar',           cost = 1000 },
-        f620 =            { make = 'Ocelot',         model = 'F620',               cost = 1000 },
-        felon =           { make = 'Lampadati',      model = 'Felon',              cost = 1000 },
-        felon2 =          { make = 'Lampadati',      model = 'Felon GT',           cost = 1000 },
-        jackal =          { make = 'Ocelot',         model = 'Jackal',             cost = 1000 },
-        kanjo =           { make = 'Dinka',          model = 'Kanjo SJ',           cost = 1000 },
-        oracle =          { make = 'Übermacht',      model = 'Oracle',             cost = 1000 },
-        postlude =        { make = 'Dinka',          model = 'Postlude',           cost = 1000 },
-        sentinel =        { make = 'Übermacht',      model = 'Sentinel',           cost = 1000 },
-        windsor2 =        { make = 'Enus',           model = 'Windsor',            cost = 1000 },
-        zion =            { make = 'Übermacht',      model = 'Zion',               cost = 1000 },
-        zion2 =           { make = 'Übermacht',      model = 'Zion Cabrio',        cost = 1000 },
+        ['exemplar'] =        { make = 'Dewbauchee',     model = 'Exemplar',           cost = 1000 },
+        ['f620'] =            { make = 'Ocelot',         model = 'F620',               cost = 1000 },
+        ['felon'] =           { make = 'Lampadati',      model = 'Felon',              cost = 1000 },
+        ['felon2'] =          { make = 'Lampadati',      model = 'Felon GT',           cost = 1000 },
+        ['jackal'] =          { make = 'Ocelot',         model = 'Jackal',             cost = 1000 },
+        ['kanjo'] =           { make = 'Dinka',          model = 'Kanjo SJ',           cost = 1000 },
+        ['oracle'] =          { make = 'Übermacht',      model = 'Oracle',             cost = 1000 },
+        ['postlude'] =        { make = 'Dinka',          model = 'Postlude',           cost = 1000 },
+        ['sentinel'] =        { make = 'Übermacht',      model = 'Sentinel',           cost = 1000 },
+        ['windsor2'] =        { make = 'Enus',           model = 'Windsor',            cost = 1000 },
+        ['zion'] =            { make = 'Übermacht',      model = 'Zion',               cost = 1000 },
+        ['zion2'] =           { make = 'Übermacht',      model = 'Zion Cabrio',        cost = 1000 },
     },
     sedan = {
         ['asea'] =            { make = 'Declasse',       model = 'Asea',               cost = 1000 },
@@ -144,6 +144,9 @@ Type.Auto = {
         ['verus'] =           { make = 'Grotti',         model = 'word',               cost = 1000 },
         ['winky'] =           { make = 'Grotti',         model = 'word',               cost = 1000 },
     },
+}
+
+Type.Import = {
     sport = {
         ['alpha'] =           { make = 'Maxwell',        model = 'word',               cost = 1000 },
         ['banshee'] =         { make = 'Dinka',          model = 'word',               cost = 1000 },
@@ -239,6 +242,7 @@ Type.Auto = {
         ['zorrusso'] =        { make = 'Grotti',         model = 'word',               cost = 1000 },
     },
 }
+
 
 Type.Special = {
     tuner = {
