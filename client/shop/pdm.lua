@@ -3,7 +3,7 @@ local loadmenu = function(type)
     for _, v in pairs(type) do
         vehicles[#vehicles+1] = {
             title = v.make..', '..v.model,
-            description = '$'..v.cost,
+            description = '$'..v.maxcost,
             --image = v.image
         }
     end
@@ -18,49 +18,57 @@ end
 
 local options = {
     {
-        title = 'Compacts',
+        title = 'Compacts', icon ='car-side',
+        iconColor = '#3498DB',
         onSelect = function()
             loadmenu(Type.Auto.compact)
         end,
     },
     {
-        title = 'Coupes',
+        title = 'Coupes', icon ='car-side',
+        iconColor = '#3498DB',
         onSelect = function()
             loadmenu(Type.Auto.coupe)
         end,
     },
     {
-        title = 'Sedans',
+        title = 'Sedans', icon ='car-side',
+        iconColor = '#3498DB',
         onSelect = function()
             loadmenu(Type.Auto.sedan)
         end,
     },
     {
-        title = 'Suvs',
+        title = 'Suvs', icon ='van-shuttle',
+        iconColor = '#3498DB',
         onSelect = function()
             loadmenu(Type.Auto.suv)
         end,
     },
     {
-        title = 'Trucks',
+        title = 'Trucks', icon ='truck-pickup',
+        iconColor = '#3498DB',
         onSelect = function()
             loadmenu(Type.Auto.truck)
         end,
     },
     {
-        title = 'Vans',
+        title = 'Vans', icon ='van-shuttle',
+        iconColor = '#3498DB',
         onSelect = function()
             loadmenu(Type.Auto.van)
         end,
     },
     {
-        title = 'Muscle',
+        title = 'Muscle', icon ='car-side',
+        iconColor = '#3498DB',
         onSelect = function()
             loadmenu(Type.Auto.muscle)
         end,
     },
     {
-        title = 'Off-Road',
+        title = 'Off-Road', icon ='car-side',
+        iconColor = '#3498DB',
         onSelect = function()
             loadmenu(Type.Auto.offroad)
         end,
@@ -70,7 +78,7 @@ local options = {
 RegisterCommand('pdm', function()
     lib.registerContext({
         id = 'shop_pdm',
-        title = 'Premium Deluxe Motorsport',
+        title = 'P.D.M. - Auto',
         menu = 'pdm_main',
         options = options
     })

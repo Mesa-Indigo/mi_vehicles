@@ -10,7 +10,7 @@ local loadmenu = function(type)
     lib.registerContext({
         id = 'list',
         title = 'Listed Vehicles',
-        menu = 'shop_lxm',
+        menu = 'shop_bcs',
         options = vehicles
     })
     lib.showContext('list')
@@ -18,28 +18,28 @@ end
 
 local options = {
     {
-        title = 'Sports', icon ='car-side',
-        iconColor = '#F1C40F',
+        title = 'Urban', icon ='bicycle',
+        iconColor = '#EB984E',
         onSelect = function()
-            loadmenu(Type.Import.sport)
+            loadmenu(Type.Cycle.urban)
         end,
     },
     {
-        title = 'Supers', icon ='car-side',
-        iconColor = '#F1C40F',
+        title = 'Sport', icon ='bicycle',
+        iconColor = '#EB984E',
         onSelect = function()
-            loadmenu(Type.Import.super)
+            loadmenu(Type.Cycle.sport)
         end,
     },
 }
 
-RegisterCommand('lxm', function()
+RegisterCommand('bcs', function()
     lib.registerContext({
-        id = 'shop_lxm',
-        title = 'Luxury Imports',
-        menu = 'lxm_main',
+        id = 'shop_bcs',
+        title = 'Bicycle Shop',
+        menu = 'bcs_main',
         options = options
     })
 
-    lib.showContext('shop_lxm')
+    lib.showContext('shop_bcs')
 end, false)

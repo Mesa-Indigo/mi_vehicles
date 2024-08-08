@@ -3,7 +3,7 @@ local loadmenu = function(type)
     for _, v in pairs(type) do
         vehicles[#vehicles+1] = {
             title = v.make..', '..v.model,
-            description = '$'..v.cost,
+            description = '$'..v.maxcost,
             --image = v.image
         }
     end
@@ -18,13 +18,15 @@ end
 
 local options = {
     {
-        title = 'Tuners',
+        title = 'Tuners', icon ='car-side',
+        iconColor = '#9B59B6',
         onSelect = function()
             loadmenu(Type.Special.tuner)
         end,
     },
     {
-        title = 'Classics',
+        title = 'Classics', icon ='car-side',
+        iconColor = '#9B59B6',
         onSelect = function()
             loadmenu(Type.Special.classic)
         end,
@@ -35,7 +37,7 @@ RegisterCommand('bnc', function()
     lib.registerContext({
         id = 'shop_bnc',
         title = 'Benny\'s Customs',
-        menu = 'pdm_main',
+        menu = 'bnc_main',
         options = options
     })
 
