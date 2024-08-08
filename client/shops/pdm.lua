@@ -4,56 +4,56 @@ local options = {
         title = 'Compacts', icon ='car-side',
         iconColor = Shop.colors.pdm,
         onSelect = function()
-            LoadMenu(Type.Auto.compact)
+            LoadMenu(Type.Auto.compact, Shop.PDM)
         end,
     },
     {
         title = 'Coupes', icon ='car-side',
         iconColor = Shop.colors.pdm,
         onSelect = function()
-            LoadMenu(Type.Auto.coupe)
+            LoadMenu(Type.Auto.coupe, Shop.PDM)
         end,
     },
     {
         title = 'Sedans', icon ='car-side',
         iconColor = Shop.colors.pdm,
         onSelect = function()
-            LoadMenu(Type.Auto.sedan)
+            LoadMenu(Type.Auto.sedan, Shop.PDM)
         end,
     },
     {
         title = 'Suvs', icon ='van-shuttle',
         iconColor = Shop.colors.pdm,
         onSelect = function()
-            LoadMenu(Type.Auto.suv)
+            LoadMenu(Type.Auto.suv, Shop.PDM)
         end,
     },
     {
         title = 'Trucks', icon ='truck-pickup',
         iconColor = Shop.colors.pdm,
         onSelect = function()
-            LoadMenu(Type.Auto.truck)
+            LoadMenu(Type.Auto.truck, Shop.PDM)
         end,
     },
     {
         title = 'Vans', icon ='van-shuttle',
         iconColor = Shop.colors.pdm,
         onSelect = function()
-            LoadMenu(Type.Auto.van)
+            LoadMenu(Type.Auto.van, Shop.PDM)
         end,
     },
     {
         title = 'Muscle', icon ='car-side',
         iconColor = Shop.colors.pdm,
         onSelect = function()
-            LoadMenu(Type.Auto.muscle)
+            LoadMenu(Type.Auto.muscle, Shop.PDM)
         end,
     },
     {
         title = 'Off-Road', icon ='car-side',
         iconColor = Shop.colors.pdm,
         onSelect = function()
-            LoadMenu(Type.Auto.offroad)
+            LoadMenu(Type.Auto.offroad, Shop.PDM)
         end,
     },
 }
@@ -69,7 +69,7 @@ local pedops = {
 }
 
 local ped = { obj = nil, spawned = false}
-local model, crd = lib.requestModel('a_m_y_business_02'), Shop.PDM.loc.ped
+local model, crd = lib.requestModel('a_m_y_business_02'), Shop.PDM.ped
 local scn = 'WORLD_HUMAN_DRINKING_FACILITY'
 
 -- initial context for shop_pdm
@@ -81,7 +81,6 @@ lib.registerContext({
 
 RegisterNetEvent('mi_veh:c:load:pdm')
 AddEventHandler('mi_veh:c:load:pdm', function()
-    print('weh')
     --lib.showContext('shop_pdm')
     LoadBlip(Shop.PDM.blip)
     LoadPed(ped.obj, model, crd, scn, pedops)
@@ -91,7 +90,7 @@ AddEventHandler('onResourceStart', function()
     local resource = GetCurrentResourceName()
     if resource == GetCurrentResourceName() then
         TriggerServerEvent('mi_veh:s:load:pdm')
-        if Debug then print('loadpdm: rs - s') end
+        if Debug then print('loadpdm: rs -> s') end
     end
 end)
 

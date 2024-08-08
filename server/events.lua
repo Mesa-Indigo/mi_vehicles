@@ -14,5 +14,5 @@ end)
 RegisterServerEvent('mi_veh:s:load:pdm')
 AddEventHandler('mi_veh:s:load:pdm', function()
     TriggerClientEvent('mi_veh:c:load:pdm', 1)
-    if Debug then print('loadpdm: s - c') end
+    if Debug then print('loadpdm: s -> c') end
 end)

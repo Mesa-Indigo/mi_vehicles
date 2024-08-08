@@ -1,15 +1,17 @@
 -- loads target menu on ped for purchases
-LoadMenu = function(data)
+LoadMenu = function(data, shop)
     -- create list for vehicles
     local vehicles = {}
     -- load vehicles into list
-    for _, v in pairs(data) do
+    for key, value in pairs(data) do
         vehicles[#vehicles+1] = {
-            title = v.make..', '..v.model,
-            description = '$'..v.maxcost,
-            image = v.image,
+            title = value.make..', '..value.model,
+            description = '$'..value.maxcost,
+            image = value.image,
             onSelect = function()
-                print(v.make..', '..v.model)
+                if Debug then
+                    print('Make: '..value.make..', Model: '..value.model)
+                end LoadVehicle_View(key, shop)
             end,
         }
     end
@@ -51,14 +53,19 @@ LoadPed = function(ped, mdl, loc, scn, ops)
     exports.ox_target:addEntity(netId, ops)
 end
 
--- loads object for viewing vehicle images
-LoadPreview = function(mdl, loc, hdn, ops)
-    
-end
-
 -- loads vehicle for physical viewing
-LoadVehicle_View = function(shop, data, options)
-
+LoadVehicle_View = function(data, shop)
+    if Debug then print('Data xfrd: '..data) end
+    -- notify player of spawn location
+    local txt1 = {
+        id = 'veh_display', tx = 'Vehicle Ready for View',
+        dc = 'the chosen vehicle is in the garage to be configured'
+    } DoNotify(txt1, Inf)
+    -- spawn vehicle in garage location
+    local cds = shop.spawn
+    print(cds)
+    local vehicle = CreateVehicle(data, -23.677, -1094.452, 26.815, 339.995, true, false)
+    SetVehicleOnGroundProperly(vehicle)
 end
 
 -- sets details for purchased vehicle
