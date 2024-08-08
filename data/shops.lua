@@ -1,7 +1,5 @@
 Shop = {}
 
-Shop.Target = 'zone'    -- sets target option ['ped' or 'zone']
-
 Shop.colors = { -- colors for the icons that display in the menu
     pdm = '#7FB3D5', -- normal auto
     lxm = '#F7DC6F ', -- luxury auto
@@ -13,11 +11,12 @@ Shop.colors = { -- colors for the icons that display in the menu
 }
 
 Shop.PDM = {
-    blip = { label = '', spr = 1, clr = 1, scl = 0.6 },
-    label = '',
+    blip = {
+        label = 'PDM Autos', spr = 810, clr = 2, scl = 0.6,
+        loc = vec3(-42.597, -1094.883, 27.274)
+    },
     loc = {
         ped = vec4(-31.830, -1099.353, 27.274, 70.00),
-        prev = { loc = vec3(-32.17, -1098.68, 27.32), head = -103.85 },
         spawn = vec4(-23.677, -1094.452, 26.815, 339.995)
     }
 }
