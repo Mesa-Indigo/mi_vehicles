@@ -9,8 +9,8 @@ local loadmenu = function(type)
     end
     lib.registerContext({
         id = 'list',
-        title = 'Listed Vehicles',
-        menu = 'shop_bcs',
+        title = 'Listed Airframes',
+        menu = 'shop_dwa',
         options = vehicles
     })
     lib.showContext('list')
@@ -18,27 +18,27 @@ end
 
 local options = {
     {
-        title = 'Urban', icon ='bicycle',
-        iconColor = Shop.colors.bcs,
+        title = 'Helicopters', icon ='helicopter',
+        iconColor = Shop.colors.dwa,
         onSelect = function()
-            loadmenu(Type.Cycle.urban)
+            loadmenu(Type.Airframe.heli)
         end,
     },
     {
-        title = 'Sport', icon ='bicycle',
-        iconColor = Shop.colors.bcs,
+        title = 'Airplanes', icon ='plane',
+        iconColor = Shop.colors.dwa,
         onSelect = function()
-            loadmenu(Type.Cycle.sport)
+            loadmenu(Type.Airframe.plane)
         end,
     },
 }
 
-RegisterCommand('bcs', function()
+RegisterCommand('dwa', function()
     lib.registerContext({
-        id = 'shop_bcs',
-        title = 'Bicycle Shop',
+        id = 'shop_dwa',
+        title = 'D.W. Airlines',
         options = options
     })
 
-    lib.showContext('shop_bcs')
+    lib.showContext('shop_dwa')
 end, false)

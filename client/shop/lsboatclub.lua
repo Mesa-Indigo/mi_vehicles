@@ -9,8 +9,8 @@ local loadmenu = function(type)
     end
     lib.registerContext({
         id = 'list',
-        title = 'Listed Vehicles',
-        menu = 'shop_mtc',
+        title = 'Listed Watercraft',
+        menu = 'shop_lsb',
         options = vehicles
     })
     lib.showContext('list')
@@ -18,34 +18,34 @@ end
 
 local options = {
     {
-        title = 'Sport', icon ='motorcycle',
-        iconColor = Shop.colors.mtc,
+        title = 'Leisure', icon ='sailboat',
+        iconColor = Shop.colors.lsb,
         onSelect = function()
-            loadmenu(Type.Moto.sport)
+            loadmenu(Type.Boat.leisure)
         end,
     },
     {
-        title = 'Offroad', icon ='motorcycle',
-        iconColor = Shop.colors.mtc,
+        title = 'Sport', icon ='sailboat',
+        iconColor = Shop.colors.lsb,
         onSelect = function()
-            loadmenu(Type.Moto.offroad)
+            loadmenu(Type.Boat.sport)
         end,
     },
     {
-        title = 'Leisure', icon ='motorcycle',
-        iconColor = Shop.colors.mtc,
+        title = 'Submersible', icon ='ferry',
+        iconColor = Shop.colors.lsb,
         onSelect = function()
-            loadmenu(Type.Moto.leisure)
+            loadmenu(Type.Boat.submersible)
         end,
     },
 }
 
-RegisterCommand('mtc', function()
+RegisterCommand('lsb', function()
     lib.registerContext({
-        id = 'shop_mtc',
-        title = 'P.D.M - Motorcycles',
+        id = 'shop_lsb',
+        title = 'L.S.Y. Boat Club',
         options = options
     })
 
-    lib.showContext('shop_mtc')
+    lib.showContext('shop_lsb')
 end, false)

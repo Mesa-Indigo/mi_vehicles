@@ -19,14 +19,14 @@ end
 local options = {
     {
         title = 'Sports', icon ='car-side',
-        iconColor = '#F1C40F',
+        iconColor = Shop.colors.lxm,
         onSelect = function()
             loadmenu(Type.Import.sport)
         end,
     },
     {
         title = 'Supers', icon ='car-side',
-        iconColor = '#F1C40F',
+        iconColor = Shop.colors.lxm,
         onSelect = function()
             loadmenu(Type.Import.super)
         end,
@@ -37,7 +37,7 @@ RegisterCommand('lxm', function()
     lib.registerContext({
         id = 'shop_lxm',
         title = 'Luxury Imports',
-        menu = 'lxm_main',
+
         options = options
     })
 

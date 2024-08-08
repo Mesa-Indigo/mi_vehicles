@@ -19,14 +19,14 @@ end
 local options = {
     {
         title = 'Tuners', icon ='car-side',
-        iconColor = '#9B59B6',
+        iconColor = Shop.colors.bnc,
         onSelect = function()
             loadmenu(Type.Special.tuner)
         end,
     },
     {
         title = 'Classics', icon ='car-side',
-        iconColor = '#9B59B6',
+        iconColor = Shop.colors.bnc,
         onSelect = function()
             loadmenu(Type.Special.classic)
         end,
@@ -37,7 +37,6 @@ RegisterCommand('bnc', function()
     lib.registerContext({
         id = 'shop_bnc',
         title = 'Benny\'s Customs',
-        menu = 'bnc_main',
         options = options
     })
 
