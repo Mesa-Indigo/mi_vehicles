@@ -1,5 +1,3 @@
-local sped = { ped = nil }
-
 local loadmenu = function(type)
     local vehicles = {}
     for _, v in pairs(type) do
@@ -77,37 +75,32 @@ local options = {
     },
 }
 
-RegisterCommand('pdm', function()
-    lib.registerContext({
-        id = 'shop_pdm',
-        title = 'P.D.M. - Auto',
-        options = options
-    })
-
-    lib.showContext('shop_pdm')
-end, false)
-
 local loadblip = function(shop)
 
 end
 
-local loadped = function(shop, ped)
+local loadped = function(shop)
+    local sped = { ped = nil }
     local model, loc, head = 'a_f_m_bevhills_01', shop.loc.ped, shop.loc.ped.w
-    ped = CreatePed(1, model, loc.x, loc.y, loc.z, head, true, false)
-    FreezeEntityPosition(ped, true)
+    sped.ped = CreatePed(1, model, loc.x, loc.y, loc.z, head, true, false)
+    FreezeEntityPosition(sped.ped, true)
 end
+
+lib.registerContext({
+    id = 'shop_pdm',
+    title = 'P.D.M. - Auto',
+    options = options
+})
 
 RegisterNetEvent('mi_veh:c:load:pdm')
 AddEventHandler('mi_veh:c:load:pdm', function()
-    loadped(Shop.PDM, sped.ped)
+    local sped, shop = { ped = nil }, Shop.PDM
+    local model, loc, head = 'a_f_m_bevhills_01', shop.loc.ped, shop.loc.ped.w
+    sped.ped = CreatePed(1, model, loc.x, loc.y, loc.z, head, true, false)
+    FreezeEntityPosition(sped.ped, true)
 end)
 
 RegisterCommand('pdm', function()
-    lib.registerContext({
-        id = 'shop_pdm',
-        title = 'P.D.M. - Auto',
-        options = options
-    })
     TriggerServerEvent('mi_veh:s:load:pdm')
     --lib.showContext('shop_pdm')
 end, false)
