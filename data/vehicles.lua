@@ -199,7 +199,7 @@ Type.Import = {
 
     },
     super = {
-        ['adder'] =           { year = 2013,     make = 'Grotti',         model = 'word',               mincost = 1000,     maxcost = 2000,     image = 'nui://mi_utils/data/img/adder.png' },
+        ['adder'] =           { year = 2013,     make = 'Grotti',         model = 'word',               mincost = 1000,     maxcost = 2000,     image = '' },
         ['autarch'] =         { year = 2013,     make = 'Grotti',         model = 'word',               mincost = 1000,     maxcost = 2000,     image = '' },
         ['banshee2'] =        { year = 2013,     make = 'Grotti',         model = 'word',               mincost = 1000,     maxcost = 2000,     image = '' },
         ['bullet'] =          { year = 2013,     make = 'Grotti',         model = 'word',               mincost = 1000,     maxcost = 2000,     image = '' },

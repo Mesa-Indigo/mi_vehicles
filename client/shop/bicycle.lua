@@ -4,7 +4,7 @@ local loadmenu = function(type)
         vehicles[#vehicles+1] = {
             title = v.make..', '..v.model,
             description = '$'..v.maxcost,
-            --image = v.image
+            image = v.image
         }
     end
     lib.registerContext({
