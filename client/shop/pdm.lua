@@ -79,6 +79,18 @@ local loadblip = function(shop)
 
 end
 
+local preview = function(shop)
+    local prev = { obj = nil, spawned = false }
+    local model = lib.requestModel('prop_laptop_01a', 300)
+    local loc = shop.loc.prev
+    prev.obj = CreateObject(model, loc.x, loc.y, loc.z, true, false, false)
+    PlaceObjectOnGroundProperly(prev.obj)
+    FreezeEntityPosition(prev.obj, true)
+end
+
+preview(Shop.PDM)
+SetModelAsNoLongerNeeded('prop_laptop_01a')
+
 local loadped = function(shop)
     local sped = { ped = nil }
     local model, loc, head = 'a_f_m_bevhills_01', shop.loc.ped, shop.loc.ped.w
