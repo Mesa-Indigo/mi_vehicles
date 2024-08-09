@@ -63,9 +63,10 @@ LoadVehicle_View = function(data, shop)
     } DoNotify(txt1, Inf)
     -- spawn vehicle in garage location
     local cds = shop.spawn
-    print(cds)
-    local vehicle = CreateVehicle(data, -23.677, -1094.452, 26.815, 339.995, true, false)
-    SetVehicleOnGroundProperly(vehicle)
+    local vehicle = CreateVehicle(data, cds.x, cds.y, cds.z, cds.w, true, false)
+    --SetVehicleOnGroundProperly(vehicle)
+    SetVehicleEngineOn(vehicle, false, true, true)
+    if Debug then print('Spawn: '..cds) end
 end
 
 -- sets details for purchased vehicle
