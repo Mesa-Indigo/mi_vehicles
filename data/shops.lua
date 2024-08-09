@@ -11,12 +11,15 @@ Shop.colors = { -- colors for the icons that display in the menu
 }
 
 Shop.PDM = {
+    active = true,
     blip = {
         label = 'PDM Autos', spr = 810, clr = 2, scl = 0.6,
         loc = vec3(-42.597, -1094.883, 27.274)
     },
     ped = vec4(-31.830, -1099.353, 27.274, 70.00),
-    spawn = vec3(-23.657, -1094.413, 26.537), head =  340.149
+    spawn = vec3(-23.657, -1094.413, 26.537), head =  340.149,
+    mech = vec4(-25.383, -1092.239, 27.274, 155.713),
+    point = vec3(0,0,0)
 }
 
 Shop.LXM = {

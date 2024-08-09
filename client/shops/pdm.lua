@@ -68,9 +68,23 @@ local pedops = {
     },
 }
 
+-- options for ped
+local mchops = {
+    {
+        label = 'Customize Vehicle', icon ='fa-solid fa-spray-can-sparkles',
+        onSelect = function()
+            SetVehicle_Details(Shop.PDM.point)
+        end,
+    },
+}
+
 local ped = { obj = nil, spawned = false}
 local model, crd = lib.requestModel('a_m_y_business_02'), Shop.PDM.ped
 local scn = 'WORLD_HUMAN_DRINKING_FACILITY'
+
+local mch = { obj = nil, spawned = false}
+local mchmodel, mchcrd = lib.requestModel('s_m_y_xmech_01'), Shop.PDM.mech
+local mchscn = 'WORLD_HUMAN_DRINKING_FACILITY'
 
 -- initial context for shop_pdm
 lib.registerContext({
@@ -84,14 +98,7 @@ AddEventHandler('mi_veh:c:load:pdm', function()
     --lib.showContext('shop_pdm')
     LoadBlip(Shop.PDM.blip)
     LoadPed(ped.obj, model, crd, scn, pedops)
-end)
-
-AddEventHandler('onResourceStart', function()
-    local resource = GetCurrentResourceName()
-    if resource == GetCurrentResourceName() then
-        TriggerServerEvent('mi_veh:s:load:pdm')
-        if Debug then print('loadpdm: rs -> s') end
-    end
+    LoadPed(mch.obj, mchmodel, mchcrd, mchscn, mchops)
 end)
 
 -- test commands

@@ -64,11 +64,31 @@ LoadVehicle_View = function(data, shop)
     -- spawn vehicle in garage location
     local vehicle = lib.callback('mi_veh:test', false, source, data, shop.spawn, shop.head)
     SetVehicleOnGroundProperly(vehicle)
-    --SetVehicleEngineOn(vehicle, false, true, true)
+    SetVehicleEngineOn(vehicle, false, true, true)
     if Debug then print('Spawn: '..shop.spawn..'| Head: '..shop.head) end
 end
 
 -- sets details for purchased vehicle
-SetVehicle_Details = function(shop, data, player, vehicle)
-
+SetVehicle_Details = function(coords)
+    local player, vehicle = cache.ped, lib.getClosestVehicle(coords, 5.0, true)
+    if vehicle > coords then
+        print('error')
+    end
+    if player.charId ~= vehicle.owner then
+        print('error')
+    elseif player.charId == vehicle.owner then
+        local input = lib.inputDialog('Customization Options', {
+            {type = 'input', label = 'Text input', description = 'Some input description', required = true, min = 4, max = 16},
+            {type = 'number', label = 'Number input', description = 'Some number description', icon = 'hashtag'},
+            {type = 'checkbox', label = 'Simple checkbox'},
+            {type = 'color', label = 'Colour input', default = '#eb4034'},
+            {type = 'date', label = 'Date input', icon = {'far', 'calendar'}, default = true, format = "DD/MM/YYYY"}
+        })
+        print(json.encode(input))
+        -- Getting rgb values from colour picker
+        local rgb = lib.math.torgba(input[4])
+        -- Transforming date timestamp to a readable format with Lua's os library (server-only)
+        local timestamp = math.floor(input[5] / 1000)
+        local date = os.date('%Y-%m-%d %H:%M:%S', timestamp)
+    end
 end
