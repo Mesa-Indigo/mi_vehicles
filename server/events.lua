@@ -3,11 +3,13 @@ lib.callback.register('mi_veh:s:importvehicle', function(player, data)
     local vehicleData = VehicleData[data.model]
 end)
 
-local vehicle
-lib.callback.register('mi_veh:test', function(source, coords, model)
-    vehicle = Ox.CreateVehicle({
-        model = 'winky'
-    }, vec3(-219.312, -1326.697, 30.693), 223.938)
+lib.callback.register('mi_veh:test', function(source, model, coord, head)
+    local player = Ox.GetPlayer(source)
+    local vehicle = Ox.CreateVehicle({
+        owner = player.charId,
+        model = model,
+    }, coord, head)
+    return vehicle
 end)
 
 

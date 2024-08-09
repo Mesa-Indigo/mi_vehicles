@@ -62,11 +62,10 @@ LoadVehicle_View = function(data, shop)
         dc = 'the chosen vehicle is in the garage to be configured'
     } DoNotify(txt1, Inf)
     -- spawn vehicle in garage location
-    local cds = shop.spawn
-    local vehicle = CreateVehicle(data, cds.x, cds.y, cds.z, cds.w, true, false)
-    --SetVehicleOnGroundProperly(vehicle)
-    SetVehicleEngineOn(vehicle, false, true, true)
-    if Debug then print('Spawn: '..cds) end
+    local vehicle = lib.callback('mi_veh:test', false, source, data, shop.spawn, shop.head)
+    SetVehicleOnGroundProperly(vehicle)
+    --SetVehicleEngineOn(vehicle, false, true, true)
+    if Debug then print('Spawn: '..shop.spawn..'| Head: '..shop.head) end
 end
 
 -- sets details for purchased vehicle
